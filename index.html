@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            font-family:"Poppins";
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+           height:1200px;
+           width:1080px;
+           background-color: #04000d;
+           background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+           
+
+        }
+        .nav{
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            position:sticky;
+            top:0px;
+            left:50px;
+            color:beige;
+            width:1260px;
+            z-index: 1;
+            background: transparent;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            font-size: clamp(1rem, 1.0568rem + -0.1515vw, 0.9375rem);
+            margin-left: 0.5rem;
+           
+        }
+        .nav ul{
+            display: flex;
+            justify-content:flex-end;
+            list-style: none;
+            padding: 20px;
+            flex-direction: row;
+
+        }
+        .nav ul li a{
+            color:rgb(237, 237, 205);
+            margin:20px;
+            text-decoration: none;
+        }
+        .header{
+            display: flex;
+            justify-content:space-between;
+            margin: 10px;
+            padding-left: 50px;
+        }
+        .heading{
+            padding-top:3px;
+            padding-left:5px;
+            font-size:1.5rem;
+        }
+        .nav ul li a:hover{
+            background-color:rgb(232, 156, 15);
+            border-radius:3px;
+        }
+        .container{
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            color:antiquewhite;
+            font-weight:bolder;
+            margin:0.5rem;
+            background-image:url("https://img.freepik.com/free-photo/coffee-latte-with-cookies-coffiee-beans_141793-17440.jpg?size=626&ext=jpg&ga=GA1.1.254843802.1704894114&semt=ais");
+            width:1260px;
+            height:500px;
+            background-size: 100%;
+            background-position:center;
+            border-bottom:2px solid rgb(172, 119, 20);     
+        }
+        .conthead{
+            width:250px;
+            height:150px;
+            margin-left:1rem;
+            font-size: clamp(1rem, 0.2045rem + 2.1212vw, 1.875rem);
+        }
+        .container2{
+            display: flex;
+            justify-content: center;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: clamp(1rem, -0.8182rem + 4.8485vw, 3rem);
+            color:beige;
+            height: 600px;
+            border-bottom:2px solid rgb(172, 119, 20);
+            width:1260px;
+            margin: 0.5rem;
+
+        }
+        .container2 h1{
+            font-size: clamp(1rem, -0.9318rem + 5.1515vw, 3.125rem);
+        }
+        .robusta{
+            width:300px;
+            height:400px;
+            border:1px solid rgb(42, 39, 32);
+            position:absolute;
+            top:700px;
+            left:270px;
+            border-radius:15px;
+            background-color: #000000;
+            background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+            
+
+        }
+        .arabica{
+            width:300px;
+            height:400px;
+            border:1px solid rgb(42, 39, 32);
+            position:absolute;
+            top:700px;
+            left:680px;
+            border-radius:15px;
+            background-color: #000000;
+            background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+
+
+
+        }
+        .robustaimag{
+            position: relative;
+            top:-35px;
+            left:95px;
+            border-radius:50%;
+        }
+        .arabicaimag{
+            position: relative;
+            top:-35px;
+            left:95px;
+            border-radius:50%;
+
+        }
+        .arabica h1{
+            position: relative;
+            top:-32px;
+            left:110px;
+            font-size:0.8rem;
+        }
+        .robusta h1{
+            position: relative;
+            top:-35px;
+            left:110px;
+            font-size:0.8rem;
+        }
+        .arabica p{
+            font-size:0.6rem;
+            height: 50px;
+            width:300px;
+            margin-left:10px;
+        }
+        .robusta p{
+            font-size:0.6rem;
+            height:80px;
+            width:290px;
+            margin-left:10px;
+        }
+        .arabica a{
+            position: relative;
+            top:140px;
+            left:110px;
+            color:darkcyan;
+            font-size:0.8rem;
+            text-decoration: none;
+        }
+        .arabica a:hover{
+            background-color:rgb(51, 83, 51);
+            border-radius: 10px;
+        }
+        .robusta a:hover{
+            background-color:rgb(51, 83, 51);
+            border-radius: 10px;
+        }
+        .robusta a{
+            position: relative;
+            top:100px;
+            left:105px;
+            color:darkcyan;
+            font-size:0.8rem;
+            text-decoration: none;
+
+        }
+        .info{
+            width:1260px;
+            height:700px;
+            border-bottom:2px solid rgb(172, 119, 20);
+            display: flex;
+            justify-content:flex-start;
+            flex-direction:column;
+            color:beige;
+            font-size: clamp(1rem, 0.2045rem + 2.1212vw, 1.875rem);
+            flex-wrap: wrap;
+            margin: 0.5rem;
+            
+
+        }
+        .info h1{
+            margin:1rem;
+        }
+        .info img{
+            margin-top:10rem;
+            border-radius:10px;
+            margin-left: 2rem;
+        }
+        .info p{
+            font-size: clamp(1rem, 0.7727rem + 0.6061vw, 1.25rem);
+            width:620px;
+            margin:1rem;
+
+        }
+        .info2{
+            
+            width:1260px;
+            height:700px;
+            display: flex;
+            flex-direction:column;
+            align-items:center;
+            font-size: clamp(1rem, -0.3636rem + 3.6364vw, 2.5rem);
+            font-weight: bolder;
+            color:bisque;
+            border-bottom:2px solid rgb(172, 119, 20);
+
+
+        }
+        .internal{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: clamp(1rem, 0.7727rem + 0.6061vw, 1.25rem);
+        }
+        .cherry{
+            width:400px;
+            height:500px;
+            margin: 5rem;
+            border:1px solid grey;
+            background-color: #000000;
+            background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            padding: 1rem;
+          
+        }
+        .parchment{
+            width:400px;
+            height:500px;
+            margin:5rem;
+            border:1px solid gray;
+            background-color: #000000;
+            background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            padding: 1rem;
+          
+        }
+        .cherry p{
+            font-size: clamp(1rem, 1.3409rem + -0.9091vw, 0.625rem);
+
+        }
+        .parchment p{
+            font-size: clamp(1rem, 1.3409rem + -0.9091vw, 0.625rem);
+            
+        }
+
+        .cherry img{
+            border-radius:50%;
+
+        }
+        .parchment img{
+            border-radius:50%;
+        }
+    
+
+        @media only screen and (max-width:640px){
+            .nav{
+                flex-direction: column;
+            }
+            
+            .container2{
+                height:1000px;
+
+            }
+            .robusta{
+                top:750px;
+                left:20rem;
+                width:600px;
+                height:350px;
+                border-radius:20px;
+
+            }
+            .arabica{
+                top:1200px;
+                left:20rem;
+                width:600px;
+                height:350px;
+                border-radius:20px;
+
+            }
+            .robusta img{
+                top:-40px;
+                left:15rem;
+            }
+            .arabica img{
+                top:-40px;
+                left:15rem;
+            }
+            .robusta h1{
+                top:-20px;
+                left:16rem;
+            }
+            .arabica h1{
+                top:-20px;
+                left:16rem;
+            }
+            .robusta p{
+                font-size: 0.8rem;
+                margin-left:8rem;
+            }
+            .arabica p{
+                font-size: 0.8rem;
+                margin-left:8rem;
+
+            }
+            .robusta a{
+                left:15rem;
+                top:6rem;
+                font-size: clamp(1rem, 0.7727rem + 0.6061vw, 1.25rem);
+            }
+            .arabica a{
+                left:15rem;
+                top:7rem;
+                font-size: clamp(1rem, 0.7727rem + 0.6061vw, 1.25rem);
+
+            }
+            .info {
+                align-items: center;
+                flex-direction: column;
+                height:550px;
+            }
+            .info img{
+                width:200px;
+                margin:0px;
+                border-radius:50%;
+                
+
+            }
+            .info2{
+                height:900px;
+            }
+            .internal{
+                justify-content: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin:0.2rem;
+                padding: 0;
+            }
+            .cherry{
+                height:350px;
+                width:600px;
+                margin:2rem;
+                margin-left: 4rem;
+            }
+            .parchment{
+                height:350px;
+                width:600px;
+                margin:2rem;
+                margin-left: 4rem;
+            }
+
+
+        }
+        
+           
+    </style>
+    </head>
+    <body>
+        <div class="nav">
+            <div class="header"><img
+                    src="C:\Users\devar\webdev\assets\coffee-beans.png"
+                    alt="img" width="50px"><span class="heading">AA
+                    Coffee</span>
+            </div>
+            <ul>
+                <li style="color: orange;margin-right:45px;">Home</li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a
+                        href="https://www.barchart.com/futures/quotes/RM*0/futures-prices">Market-place</a></li>
+            </ul>
+        </div>
+        <div class="container"><h1 class="conthead">Start Your day with Purest
+                Form Of Coffee</h1></div>
+        <div class="container2"><h1>Our Products</h1>
+            <div class="robusta">
+                <img
+                    src="https://t4.ftcdn.net/jpg/00/60/32/95/240_F_60329517_m0OI1sxE1C4DO1MkGuDcZFGmaESUVyi8.jpg"
+                    alt="image" class="robustaimag" width="120px">
+                <h1>ROBUSTA</h1>
+                <p>Robusta is often talked about in contrast to arabica: it has
+                    double the caffeine of arabica beans and is generally
+                    thought of as easier to grow This particular coffee type
+                    exhibits excellent disease resistance. Robusta coffee beans
+                    have a distinctively bitter flavor</p>
+                <a href="https://en.wikipedia.org/wiki/Coffea_canephora">More
+                    Info</a>
+            </div>
+            <div class="arabica"><img
+                    src="https://media.istockphoto.com/id/1470724700/photo/coffee-beans-roasted-coffee-beans-background.webp?b=1&s=170667a&w=0&k=20&c=8aFnUoLQV93ursoB3Zc1yS7rVzq2URyyLPfThMigg9k="
+                    alt="image" class="arabicaimag" width="120px">
+                <h1>ARABICA</h1>
+                <p>Arabica coffee is a type of coffee bean known for its
+                    exceptional taste and quality.Blending arabica beans often
+                    creates exclusive signature blends with unique branding and
+                    offers control over taste, aroma, body, and acidity</p>
+                <a href="https://en.wikipedia.org/wiki/Coffea_arabica">More
+                    Info</a>
+            </div>
+        </div>
+        <div class="info"><h1>Why Our Coffee</h1>
+            <p>Welcome to AA Coffee where passion meets perfection in every
+                cup.your premier destination for quality coffee seeds and expert
+                guidance in the art of cultivation.With a passion for coffee
+                that runs deep,we meticulously select only the finest seeds from
+                renowned coffee-growing regions,ensuring superior quality and
+                flavor in every bean.Whether you're a seasoned farmer or a
+                passionate hobbyist,we provide a diverse range of coffee seed
+                varieties to suit your unique preferences and growing
+                conditions.backed by years of experience and a commitment to
+                sustainable farming practices,we offer personalizwd support and
+                resources to help you nurture your coffee plants from seed to
+                harvest.Join us in cultivating excellence and unlock the
+                potential of your coffee crop with AA coffee.The coffee origin
+                is chickmaglur the land of coffee.</p>
+            <img
+                src="https://beanandelephant.co/wp-content/uploads/2021/04/Bean-and-Elephant_Igoor-Estate-1__DSC3933.jpg"
+                alt width="500px">
+        </div>
+        <div class="info2">
+            <h1>Category</h1>
+            <div class="internal">
+                <div class="cherry"><img
+                        src="https://media.istockphoto.com/id/1294552351/photo/red-fresh-cherry-coffee-beans-background-raw-coffee-beans.jpg?s=612x612&w=0&k=20&c=klha3RYEVeaFg8_-k0nQcUZg9YpEQPC9QCbM_OVRs-g="
+                        alt="img" width="100px">
+                    <h1>Cherry</h1>
+                    <p>Coffee cherries, the vibrant and flavorful fruit of the
+                        coffee plant, are the heart of our business. Sourced
+                        from the world's most renowned coffee-growing regions,
+                        these cherries are meticulously harvested at peak
+                        ripeness to ensure exceptional quality. Our commitment
+                        to sustainability and ethical sourcing practices ensures
+                        that each coffee cherry is cultivated with care,
+                        respecting both the environment and the livelihoods of
+                        the farmers who nurture them.</p></div>
+                <div class="parchment">
+                    <img
+                        src="https://t3.ftcdn.net/jpg/03/65/28/36/360_F_365283690_5blzRkrQ50rt5n8CxUDPUFF6AEuPzhFv.jpg"
+                        alt="img" width="100px">
+                    <h1>Parchment</h1>
+                    <p>Coffee parchment, an essential component in the coffee
+                        production process, plays a pivotal role in maintaining
+                        the quality and integrity of the beans. Sourced from
+                        carefully selected coffee cherries, parchment serves as
+                        the protective layer surrounding the coffee bean during
+                        its drying phase. Its meticulous removal requires
+                        expertise to ensure the preservation of the bean's
+                        intrinsic flavors and characteristics.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
